@@ -1,0 +1,157 @@
+/* .btn.btn-primary, div#driver-popover-item .driver-popover-footer button.btn-primary, div#driver-popover-item .driver-popover-footer button.driver-next-btn {
+    background-color: #AA0AB2;
+    color: var(--white);
+    white-space: nowrap;
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #AA0AB2;
+} */
+
+.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default,
+.btn.btn-primary, div#driver-popover-item .driver-popover-footer button.btn-primary, 
+div#driver-popover-item .driver-popover-footer button.driver-next-btn {
+    background-color: #AA0AB2;
+    color: var(--white);
+    white-space: nowrap;
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #AA0AB2;
+}
+
+.page-form .filter-button.btn-primary-light {
+    color: #AA0AB2;
+}
+
+.navbar {
+    height: 60px;
+    background:  --gray-500;
+    box-shadow:  --gray-500;;
+    padding: 0;
+}
+
+.navbar {
+    height: 60px;
+    background: --gray-500;
+    box-shadow: var(--shadow-sm);
+    padding: 0;
+}
+.page-head {
+    z-index: 4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--navbar-height);
+    background:  --gray-500;
+    margin-bottom: 5px;
+}
+
+.page-container {
+    background-color: gray-500;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* .app-logo {
+    width: 34px; 
+} */
+/* .app-logo{
+    background-image: url(assets/purpledove_client/images/background.png)!important;
+} */
+/* .widget-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    color: #AA0AB2;
+    font-size: var(--text-md);
+    max-width: 350px;
+} */
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+    /* fill: #AA0AB2; */
+}
+
+
+.sidebar-section a {
+    text-decoration: none;
+    color: #AA0AB2;
+}
+
+.btn.btn-primary{
+    background-color: #AA0AB2;
+    color: white;
+  }
+  .slides-progress .slide-step.active .slide-step-indicator  {
+    background-color: #AA0AB2;
+    color: white;
+}
+.slides-progress .slide-step.active {
+    border: 1px solid #AA0AB2;
+}
+.slides-progress .slide-step.step-success:not(.active) {
+    background-color: #AA0AB2;
+    border: 1px solid #AA0AB2;
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #AA0AB2;
+    transition: width 0.6s ease;
+}
+.btn.btn-default{
+    background-color: #AA0AB2;
+    color: white;
+}
+
+
+/* Improved design */
+input[type=checkbox]:checked {
+    background-color: #AA0AB2;
+    background-size: 57%, 100%;
+    box-shadow: none;
+    border: none;
+}
+.btn btn-primary btn-sm{
+    background-color: #AA0AB2;
+}
+/* a{
+    background-color: #AA0AB2; 
+} */
+
+.btn{
+    background-color: #AA0AB2; 
+}
+.btn.btn-primary{
+    background-color: #AA0AB2;
+    color: white;
+  }
+  
+  
+  
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #AA0AB2;
+}
+
+
+@media (min-width: 992px){
+[data-page-route=Workspaces] .layout-main .layout-main-section-wrapper::-webkit-scrollbar-track, [data-page-route=Workspaces] .layout-main .layout-side-section::-webkit-scrollbar-track {
+    background: #AA0AB2;
+    color: red;
+}}
+
+
+@media (min-width: 992px){
+[data-page-route=Workspaces] .layout-main .layout-main-section-wrapper::-webkit-scrollbar-thumb, [data-page-route=Workspaces] .layout-main .layout-side-section::-webkit-scrollbar-thumb {
+    background: #d0cece;
+}}
+

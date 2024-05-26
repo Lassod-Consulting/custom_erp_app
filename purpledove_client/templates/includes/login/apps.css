@@ -1,0 +1,21 @@
+.btn.btn-primary, div#driver-popover-item .driver-popover-footer button.btn-primary, div#driver-popover-item .driver-popover-footer button.driver-next-btn {
+    background-color: #24ef87;
+    color: var(--white);
+    white-space: nowrap;
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #24efa3;
+}
+
+.slides-progress .slide-step.step-success:not(.active) {
+    background-color: #023f24;
+    border: 1px solid #023f24;
+}
+
+
+.btn{
+    background-color: #206f20; 
+}
+.btn.btn-primary{
+    background-color: #206f20;
+    color: white;
+  }

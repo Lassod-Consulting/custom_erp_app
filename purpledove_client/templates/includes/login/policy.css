@@ -1,0 +1,53 @@
+/* Styles for the link within the banner */
+.cookies-eu-banner a {
+    color: rgba(247, 250, 247, 0.9); /* Bright blue for visibility */
+    text-decoration: underline; /* Underline to signify it is clickable */
+}
+
+.cookies-eu-banner a:hover {
+    background: #fff;
+    color: rgba(32, 111, 32, 0.9); /* Darker blue on hover for interactive feedback */
+}
+
+/* Main banner styling */
+.cookies-eu-banner {
+    background: rgba(32, 111, 32, 0.9);
+    color: #fff;
+    padding: 6px;
+    font-size: 13px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 70%; /* Set width to a relative size */
+    left: 50%; /* Position halfway across the screen */
+    transform: translateX(-50%); /* Shift left by half the width of the element */
+    z-index: 10;
+    border-top-left-radius: 5px; /* Rounded top left corner */
+    border-top-right-radius: 5px; /* Rounded top right corner */
+    letter-spacing: 1px; /* Adds spacing between letters */
+}
+
+/* Button styling within the banner */
+.cookies-eu-banner button {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 4px 7px;
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.07s, color 0.07s, border-color 0.07s;
+    border-radius: 5px; /* Rounded corners for the button */
+}
+
+#learn-more{
+    background: #fff;
+    color: #222;
+}
+
+.cookies-eu-banner button:hover {
+    background: #fff;
+    color: #222;
+}

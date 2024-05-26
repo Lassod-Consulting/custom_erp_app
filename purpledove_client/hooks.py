@@ -5,12 +5,29 @@ app_description = "A client custom application "
 app_email = "systems@lassod.com"
 app_license = "MIT"
 
+
+app_logo_url = '/assets/purpledove_client/images/logo.svg'
+# Includes in <head>
+# ------------------
+
+app_include_css = "/assets/purpledove_client/css/global.css"
+app_include_js = "/assets/purpledove_client/js/purpledove_client.js"
+
+# include js, css files in header of web template
+web_include_css = "/assets/purpledove_client/css/global.css"
+web_include_js = "/assets/purpledove_client/js/purpledove_client.js"
+
+# include splash and logo
+website_context = {
+	"favicon": 	"/assets/purpledove_client/images/logo.svg",
+	"splash_image": "/assets/purpledove_client/images/favicon.png"
+}
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/purpledove_client/css/purpledove_client.css"
-# app_include_js = "/assets/purpledove_client/js/purpledove_client.js"
+app_include_css = "/assets/purpledove_client/css/purpledove_client.css"
+app_include_js = "/assets/purpledove_client/js/purpledove_client.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/purpledove_client/css/purpledove_client.css"

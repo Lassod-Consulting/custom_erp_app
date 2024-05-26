@@ -1,0 +1,73 @@
+/* body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.content {
+    margin-top: 10px;
+}
+h1 {
+    color: navy;
+}
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+a:hover {
+    text-decoration: underline;
+} */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+.container {
+    /* max-width: 800px; */
+    margin: auto;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #000000;
+}
+h1 {
+    border-bottom: 2px solid #ffffff;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional: Adds a subtle shadow to make the table pop a bit */
+}
+
+th, td {
+    border: 1px solid #dddddd; /* Light grey border for a softer look */
+    padding: 10px;
+    text-align: left; /* Align text to the left within cells */
+    vertical-align: top; /* Align text to the top of the cell */
+}
+
+th {
+    background-color: #f9f9f9; /* Light background for headers */
+    color: #333; /* Dark text for contrast */
+    font-weight: bold;
+    text-align: left; /* Headers are also aligned left */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Alternating row coloring for better readability */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f0f0; /* Alternating row coloring for better readability */
+}
+
+td {
+    text-align: left; /* Ensuring text alignment is consistent */
+    line-height: 1.5; /* Improving line spacing within cells */
+    font-size: 14px; /* Setting a standard text size */
+}

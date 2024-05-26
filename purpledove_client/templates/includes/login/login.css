@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(assets/purpledove_client/images/background1.png)!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    height: 85vh;
+    background-attachment:fixed;
+}	
+
+a {
+    color: #f1f1f1;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover{
+    color:  #023f24;
+}
+
+.slides-progress .slide-step.step-success:not(.active) {
+    background-color: #023f24;
+    border: 1px solid #023f24;
+}
+
+.btn btn-primary btn-sm{
+    background-color: #edf5f1;
+    color: var(--white);
+    white-space: nowrap;
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #023f24;
+}
+
+.login-img{
+    padding-right: 0px;
+}
+
+.main-login-form {
+    padding-left: 0px;
+    padding-right: 54px;
+    padding-top: 142px;
+    align-items: center;
+}
+
+.page-container {
+    max-width: none; 
+}
+
+.page-card {
+    max-width: 500px;
+    border: none;
+    box-shadow: none;
+    margin: 0 auto;
+    border-radius: 0px;
+    margin: 0px;
+    margin-top: 50px;
+    background-color: inherit;
+}
+
+.page-card .btn, .login-content .btn {
+    margin-top: 10px;
+}
+
+.page-card .page-card-head {
+    border-bottom: none;
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+
+
+
+.page-card-body {
+    border-top: 100px;
+    top: 10%;
+    align-items: center;
+}
+.img_cls img{
+    min-height: 460px;
+    min-width: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.page_content {
+padding-bottom: 30px;
+padding-top: 30px;
+}
+
+.navbar{
+    border: none;
+    display: none;
+}
+
+.pg-boder{
+    border: solid 1px #ebeff2;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.page-card .page-card-head .indicator{
+    font-size: 16px;
+    font-weight: normal!important;	
+}
+
+.form-horizontal img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    /* float: left; */
+    /* text-align: center; */
+}
+
+.form-footer{
+    margin-top: 5px;
+}

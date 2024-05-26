@@ -1,0 +1,13 @@
+.slides-progress .slide-step.step-success:not(.active) {
+    background-color: #AA0AB2;
+    border: 1px solid #AA0AB2;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+    --icon-stroke: currentColor;
+    --icon-fill-bg: var(--primary);
+}
