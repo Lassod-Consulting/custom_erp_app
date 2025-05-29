@@ -144,23 +144,23 @@ app_include_js = "/assets/purpledove_client/js/purpledove_client.js"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"purpledove_client.tasks.all"
-# 	],
-# 	"daily": [
-# 		"purpledove_client.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"purpledove_client.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"purpledove_client.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"purpledove_client.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"purpledove_client.tasks.all"
+	# ],
+	"daily": [
+		"purpledove_client.purpledove_client.email_notification.send_expiry_notifications"
+	],
+	# "hourly": [
+	# 	"purpledove_client.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"purpledove_client.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"purpledove_client.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------

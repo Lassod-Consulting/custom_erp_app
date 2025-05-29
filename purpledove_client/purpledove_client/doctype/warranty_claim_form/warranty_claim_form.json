@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "WCF.####",
  "creation": "2025-05-28 16:21:12.745783",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,20 +11,25 @@
   "lease_title",
   "lease_number",
   "company_name",
+  "column_break_ka71v",
+  "name_of_employee",
   "grant_letter",
   "license_pdf",
+  "section_break_vamol",
+  "body",
+  "section_break_vv2zw",
   "effective_date",
   "expiry_date",
-  "body",
-  "column_break_cyk8u",
   "eia",
   "cda",
-  "quarterly_report",
+  "column_break_9nas1",
   "asf",
+  "renewal_approval_status",
+  "quarterly_report",
   "minimum_work_progress_report",
   "renewal_approval",
-  "renewal_approval_status",
-  "name_of_employee"
+  "section_break_6fjwk",
+  "comment"
  ],
  "fields": [
   {
@@ -63,7 +69,7 @@
   },
   {
    "fieldname": "body",
-   "fieldtype": "HTML Editor",
+   "fieldtype": "Text Editor",
    "label": "Body"
   },
   {
@@ -100,24 +106,48 @@
    "fieldname": "renewal_approval_status",
    "fieldtype": "Select",
    "label": "Renewal approval Status",
-   "options": "\nApproved\nPending\nRejected"
+   "options": "Approved\nPending\nRejected"
   },
   {
    "fieldname": "name_of_employee",
-   "fieldtype": "Data",
-   "label": "Name of employee"
+   "fieldtype": "Link",
+   "label": "Name of employee",
+   "options": "User"
   },
   {
-   "fieldname": "column_break_cyk8u",
+   "fieldname": "section_break_vv2zw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ka71v",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vamol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9nas1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6fjwk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Long Text",
+   "label": "Comment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-28 16:25:55.432343",
+ "modified": "2025-05-29 20:10:39.443732",
  "modified_by": "Administrator",
  "module": "Purpledove Client",
  "name": "Warranty Claim Form",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
