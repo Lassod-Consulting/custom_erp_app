@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-28 16:21:12.745783",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lease_title",
+  "lease_number",
+  "company_name",
+  "grant_letter",
+  "license_pdf",
+  "effective_date",
+  "expiry_date",
+  "body",
+  "column_break_cyk8u",
+  "eia",
+  "cda",
+  "quarterly_report",
+  "asf",
+  "minimum_work_progress_report",
+  "renewal_approval",
+  "renewal_approval_status",
+  "name_of_employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "lease_title",
+   "fieldtype": "Data",
+   "label": "Lease Title "
+  },
+  {
+   "fieldname": "lease_number",
+   "fieldtype": "Data",
+   "label": "Lease Number"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "grant_letter",
+   "fieldtype": "Attach",
+   "label": "Grant Letter "
+  },
+  {
+   "fieldname": "license_pdf",
+   "fieldtype": "Attach",
+   "label": "License PDF "
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date "
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "HTML Editor",
+   "label": "Body"
+  },
+  {
+   "fieldname": "eia",
+   "fieldtype": "Attach",
+   "label": "EIA"
+  },
+  {
+   "fieldname": "cda",
+   "fieldtype": "Attach",
+   "label": "CDA"
+  },
+  {
+   "fieldname": "quarterly_report",
+   "fieldtype": "Attach",
+   "label": "Quarterly Report "
+  },
+  {
+   "fieldname": "asf",
+   "fieldtype": "Data",
+   "label": "ASF "
+  },
+  {
+   "fieldname": "minimum_work_progress_report",
+   "fieldtype": "Attach",
+   "label": "Minimum work progress report"
+  },
+  {
+   "fieldname": "renewal_approval",
+   "fieldtype": "Attach",
+   "label": "Renewal approval "
+  },
+  {
+   "fieldname": "renewal_approval_status",
+   "fieldtype": "Select",
+   "label": "Renewal approval Status",
+   "options": "\nApproved\nPending\nRejected"
+  },
+  {
+   "fieldname": "name_of_employee",
+   "fieldtype": "Data",
+   "label": "Name of employee"
+  },
+  {
+   "fieldname": "column_break_cyk8u",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-28 16:25:55.432343",
+ "modified_by": "Administrator",
+ "module": "Purpledove Client",
+ "name": "Warranty Claim Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
