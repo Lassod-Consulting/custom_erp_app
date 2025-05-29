@@ -148,15 +148,15 @@ scheduler_events = {
 	# "all": [
 	# 	"purpledove_client.tasks.all"
 	# ],
-	"daily": [
-		"purpledove_client.purpledove_client.email_notification.send_expiry_notifications"
-	],
+	# "daily": [
+	# 	"purpledove_client.purpledove_client.email_notification.send_expiry_notifications"
+	# ],
 	# "hourly": [
 	# 	"purpledove_client.tasks.hourly"
 	# ],
-	# "weekly": [
-	# 	"purpledove_client.tasks.weekly"
-	# ],
+	 "weekly": [
+        "purpledove_client.purpledove_client.email_notification.send_expiry_notifications"
+    ],
 	# "monthly": [
 	# 	"purpledove_client.tasks.monthly"
 	# ],
