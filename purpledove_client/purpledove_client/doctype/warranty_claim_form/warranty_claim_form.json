@@ -29,7 +29,7 @@
   "minimum_work_progress_report",
   "renewal_approval",
   "section_break_6fjwk",
-  "comment"
+  "last_notified_date"
  ],
  "fields": [
   {
@@ -135,14 +135,14 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "comment",
-   "fieldtype": "Long Text",
-   "label": "Comment"
+   "fieldname": "last_notified_date",
+   "fieldtype": "Date",
+   "label": "Last Notified Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-29 20:10:39.443732",
+ "modified": "2025-05-29 20:34:34.527129",
  "modified_by": "Administrator",
  "module": "Purpledove Client",
  "name": "Warranty Claim Form",
