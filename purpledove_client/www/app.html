@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme-mode="{{ desk_theme.lower() }}" data-theme="{{ desk_theme.lower() }}" dir={{ layout_direction }} lang="{{ lang }}">
+<html data-theme-mode="{{ desk_theme.lower() }}" data-theme="{{ desk_theme.lower() }}" dir="{{ layout_direction }}" lang="{{ lang }}">
 	<head>
 		<!-- Chrome, Firefox OS and Opera -->
 		<meta name="theme-color" content="#023f24;">
@@ -30,11 +30,405 @@
 			<style>{{ colocated_css }}</style>
 		{%- endif %}
 		<style>
-			/* {% include "templates/includes/login/login.css" %} */
-			{% include "templates/includes/css/apps.css" %}
+			
+			/* Global Animation Variables */
+			:root {
+				--purple-primary: #BB1BC3;
+				--purple-hover: #CC2CD4;
+				--purple-light: rgba(187, 27, 195, 0.1);
+				--animation-speed: 0.3s;
+				--bounce-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				--smooth-timing: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			
+			/* Smooth page transitions */
+			* {
+				transition: opacity var(--animation-speed) var(--smooth-timing),
+				           transform var(--animation-speed) var(--smooth-timing);
+			}
+
+			.btn.btn-primary.btn-sm{
+				background: #CC2CD4;
+			}
+
+			.btn.btn-primary{
+				background: #CC2CD4;
+			}
+			
+			/* Page load animations */
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+			
+			@keyframes slideInLeft {
+				from {
+					opacity: 0;
+					transform: translateX(-50px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+			
+			@keyframes slideInRight {
+				from {
+					opacity: 0;
+					transform: translateX(50px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+			
+			@keyframes scaleIn {
+				from {
+					opacity: 0;
+					transform: scale(0.8);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			
+			@keyframes pulseGlow {
+				0%, 100% {
+					box-shadow: 0 0 5px var(--purple-primary);
+				}
+				50% {
+					box-shadow: 0 0 20px var(--purple-primary), 0 0 30px var(--purple-light);
+				}
+			}
+			
+			@keyframes bounceIn {
+				0% {
+					opacity: 0;
+					transform: scale(0.3) translateY(-50px);
+				}
+				50% {
+					opacity: 1;
+					transform: scale(1.05) translateY(-10px);
+				}
+				70% {
+					transform: scale(0.95) translateY(0);
+				}
+				100% {
+					opacity: 1;
+					transform: scale(1) translateY(0);
+				}
+			}
+			
+			@keyframes float {
+				0%, 100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-10px);
+				}
+			}
+			
+			/* Page structure animations */
+			.main-section {
+				animation: fadeInUp 0.8s var(--smooth-timing);
+				min-height: 100vh;
+			}
+			
+			header {
+				animation: slideInLeft 0.6s var(--smooth-timing);
+			}
+			
+			#body {
+				animation: scaleIn 0.7s var(--smooth-timing) 0.2s both;
+			}
+			
+			footer {
+				animation: slideInRight 0.6s var(--smooth-timing) 0.4s both;
+			}
+			
+			/* Enhanced button animations */
+			.page-actions .btn:not(.icon-btn),
+			.page-actions div#driver-popover-item .driver-popover-footer button:not(.icon-btn),
+			div#driver-popover-item .driver-popover-footer .page-actions button:not(.icon-btn) {
+				padding: 4px 10px;
+				color: white;
+				background: linear-gradient(135deg, var(--purple-primary), var(--purple-hover));
+				border: 1px solid var(--purple-primary);
+				transition: all var(--animation-speed) var(--bounce-timing);
+				position: relative;
+				overflow: hidden;
+				transform: translateY(0) scale(1);
+				box-shadow: 0 2px 8px rgba(187, 27, 195, 0.2);
+			}
+			
+			.page-actions .btn:not(.icon-btn):hover,
+			.page-actions div#driver-popover-item .driver-popover-footer button:not(.icon-btn):hover,
+			div#driver-popover-item .driver-popover-footer .page-actions button:not(.icon-btn):hover {
+				background: linear-gradient(135deg, var(--purple-hover), #DD3DE5);
+				transform: translateY(-3px) scale(1.05);
+				box-shadow: 0 8px 20px rgba(187, 27, 195, 0.4);
+				border: 1px solid var(--purple-hover);
+				animation: pulseGlow 2s infinite;
+			}
+			
+			.page-actions .btn:not(.icon-btn):active {
+				transform: translateY(-1px) scale(0.98);
+				transition: all 0.1s ease;
+			}
+			
+			/* Icon button animations */
+			.btn.icon-btn.btn-default,
+			div#driver-popover-item .driver-popover-footer button.icon-btn.btn-default,
+			.btn.icon-btn.btn-secondary,
+			div#driver-popover-item .driver-popover-footer button.icon-btn.btn-secondary,
+			div#driver-popover-item .driver-popover-footer button.icon-btn.driver-prev-btn {
+				min-width: 28px;
+				background: linear-gradient(135deg, var(--purple-primary), var(--purple-hover));
+				border: 1px solid var(--purple-primary);
+				color: white;
+				transition: all var(--animation-speed) var(--bounce-timing);
+				position: relative;
+				overflow: hidden;
+				box-shadow: 0 2px 8px rgba(187, 27, 195, 0.2);
+			}
+			
+			.btn.icon-btn:hover {
+				background: linear-gradient(135deg, var(--purple-hover), #DD3DE5);
+				transform: translateY(-2px) scale(1.15) rotate(5deg);
+				box-shadow: 0 6px 18px rgba(187, 27, 195, 0.5);
+				border: 1px solid var(--purple-hover);
+				animation: float 2s ease-in-out infinite;
+			}
+			
+			/* Enhanced shimmer effect */
+			.btn:not(.icon-btn)::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba(255, 255, 255, 0.4),
+					transparent
+				);
+				transition: left 0.6s var(--smooth-timing);
+			}
+			
+			.btn:not(.icon-btn):hover::before {
+				left: 100%;
+			}
+			
+			/* Card and content animations */
+			.card, .widget, .form-group, .list-row {
+				animation: fadeInUp 0.6s var(--smooth-timing);
+				transition: all var(--animation-speed) var(--smooth-timing);
+			}
+			
+			.card:hover, .widget:hover {
+				transform: translateY(-5px) scale(1.02);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+			}
+			
+			/* Form field animations */
+			input, textarea, select {
+				transition: all var(--animation-speed) var(--smooth-timing);
+			}
+			
+			input:focus, textarea:focus, select:focus {
+				transform: scale(1.02);
+				box-shadow: 0 0 0 3px var(--purple-light);
+				border-color: var(--purple-primary);
+			}
+			
+			/* Loading and micro-interactions */
+			.clickable {
+				cursor: pointer;
+				transition: all 0.2s var(--bounce-timing);
+			}
+			
+			.clickable:hover {
+				transform: translateY(-2px);
+			}
+			
+			.clickable:active {
+				transform: scale(0.95) translateY(0);
+			}
+			
+			/* Navigation animations */
+			.navbar, .sidebar {
+				animation: slideInLeft 0.7s var(--smooth-timing);
+			}
+			
+			.nav-item {
+				transition: all var(--animation-speed) var(--smooth-timing);
+			}
+			
+			.nav-item:hover {
+				transform: translateX(5px);
+			}
+			
+			/* Modal and popup animations */
+			.modal {
+				animation: bounceIn 0.5s var(--bounce-timing);
+			}
+			
+			.modal-backdrop {
+				animation: fadeInUp 0.3s var(--smooth-timing);
+			}
+			
+			/* Table and list animations */
+			.list-row {
+				transition: all var(--animation-speed) var(--smooth-timing);
+				border: none;
+			}
+			
+			.list-row:hover {
+				transform: translateX(5px);
+				border-left: 3px solid var(--purple-primary);
+				box-shadow: 0 2px 8px rgba(187, 27, 195, 0.2);
+			}
+			
+			/* Loading spinner enhancement */
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			
+			@keyframes spinPulse {
+				0%, 100% { 
+					transform: rotate(0deg) scale(1);
+					opacity: 1;
+				}
+				50% { 
+					transform: rotate(180deg) scale(1.1);
+					opacity: 0.8;
+				}
+			}
+			
+			.spinner, .loading {
+				animation: spinPulse 1.5s linear infinite;
+			}
+			
+			/* Smooth scrolling enhancements */
+			html {
+				scroll-behavior: smooth;
+			}
+			
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			
+			::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 4px;
+			}
+			
+			::-webkit-scrollbar-thumb {
+				background: var(--purple-primary);
+				border-radius: 4px;
+				transition: all var(--animation-speed) var(--smooth-timing);
+			}
+			
+			::-webkit-scrollbar-thumb:hover {
+				background: var(--purple-hover);
+				transform: scale(1.2);
+			}
+			
+			/* Focus styles with animation */
+			.btn:focus, *:focus-visible {
+				outline: 2px solid rgba(187, 27, 195, 0.6);
+				outline-offset: 2px;
+				animation: pulseGlow 1s ease-in-out;
+			}
+			
+			/* Page transition animations */
+			.page-enter {
+				animation: fadeInUp 0.6s var(--smooth-timing);
+			}
+			
+			.page-exit {
+				animation: fadeInUp 0.6s var(--smooth-timing) reverse;
+			}
+			
+			/* Hover effects for interactive elements */
+			a, button, .clickable {
+				position: relative;
+				overflow: hidden;
+			}
+			
+			a::after, button::after, .clickable::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 0;
+				height: 0;
+				background: radial-gradient(circle, var(--purple-light) 1px, transparent 1px);
+				transition: all 0.5s var(--smooth-timing);
+				transform: translate(-50%, -50%);
+				z-index: 0;
+			}
+			
+			a:hover::after, button:hover::after, .clickable:hover::after {
+				width: 300px;
+				height: 300px;
+			}
+			
+			/* Stagger animations for lists */
+			.list-item:nth-child(1) { animation-delay: 0.1s; }
+			.list-item:nth-child(2) { animation-delay: 0.2s; }
+			.list-item:nth-child(3) { animation-delay: 0.3s; }
+			.list-item:nth-child(4) { animation-delay: 0.4s; }
+			.list-item:nth-child(5) { animation-delay: 0.5s; }
+			
+			/* Reduced motion support */
+			@media (prefers-reduced-motion: reduce) {
+				*, *::before, *::after {
+					animation-duration: 0.01ms !important;
+					animation-iteration-count: 1 !important;
+					transition-duration: 0.01ms !important;
+				}
+			}
+			
+			/* Remove all default borders from lists and tables */
+			.list-row, .list-item, .data-row, 
+			.frappe-list .list-row,
+			table, tbody, thead, tr, td, th {
+				border: none !important;
+			}
+			
+			/* Remove borders from common Frappe elements */
+			.list-row-container,
+			.list-row-check,
+			.level-item {
+				border: none !important;
+				background: transparent !important;
+			}
+			
+			/* Prevent layout shifts from notification popups */
+			body, html {
+				overflow-x: hidden;
+				max-width: 100vw;
+			}
+			
+			/* Hide only chat widgets that cause issues */
+			.tawk-widget, #tawk-widget, [id*="tawk"], [class*="tawk"] {
+				display: none !important;
+			}
 		</style>
-	{%- endblock -%}
-		
+		{%- endblock -%}
 	</head>
 	<body>
 		{% include "public/icons/timeless/icons.svg" %}
@@ -58,19 +452,21 @@
 			frappe.csrf_token = "{{ csrf_token }}";
 		</script>
 
-				<!--Start of Tawk.to Script-->
-				<script type="text/javascript">
-					var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-					(function(){
-					var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-					s1.async=true;
-					s1.src='https://embed.tawk.to/615d6bc925797d7a89029219/1fhaeq3vv';
-					s1.charset='UTF-8';
-					s1.setAttribute('crossorigin','*');
-					s0.parentNode.insertBefore(s1,s0);
-					})();
-					</script>
-			<!--End of Tawk.to Script-->
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/615d6bc925797d7a89029219/1fhaeq3vv';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
+
+
 
 	{% for include in include_js %}
 	{{ include_script(include) }}
@@ -80,7 +476,7 @@
 	{% include "templates/includes/app_analytics/mixpanel_analytics.html" %}
 
 		{% for sound in (sounds or []) %}
-		<audio preload="auto" id="sound-{{ sound.name }}" volume={{ sound.volume or 1 }}>
+		<audio preload="auto" id="sound-{{ sound.name }}" volume="{{ sound.volume or 1 }}">
 			<source src="{{ sound.src }}"></source>
 		</audio>
 		{% endfor %}

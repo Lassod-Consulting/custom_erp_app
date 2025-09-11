@@ -6,13 +6,43 @@
 body {
     margin: 0;
     padding: 0;
+    padding-top: 2%;
     box-sizing: border-box;
-    background-image: url(assets/purpledove_client/images/background1.png)!important;
+    background-image: url(assets/purpledove_client/images/background.jpg)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     height: 85vh;
     background-attachment:fixed;
 }	
+
+
+.for-login .page-card, 
+.for-forgot .page-card, 
+.for-login-with-email-link .page-card, 
+.for-signup .page-card, 
+.for-email-login .page-card {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: var(--border-radius-md);
+    background: rgba(255, 255, 255, 0.1); /* White with slight transparency */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.for-login .page-card-head h4, .for-forgot .page-card-head h4, .for-login-with-email-link .page-card-head h4, .for-signup .page-card-head h4, .for-email-login .page-card-head h4 {
+    margin-top: 1rem;
+    font-size: var(--text-xl);
+    color: #fff;
+}
+
+.for-login .page-card .page-card-body .forgot-password-message > *, .for-forgot .page-card .page-card-body .forgot-password-message > *, .for-login-with-email-link .page-card .page-card-body .forgot-password-message > *, .for-signup .page-card .page-card-body .forgot-password-message > *, .for-email-login .page-card .page-card-body .forgot-password-message > * {
+    color: #fff;
+    font-size: var(--text-sm);
+}
+
 
 a {
     color: #f1f1f1;
@@ -20,22 +50,8 @@ a {
     background-color: transparent;
 }
 
-a:hover{
-    color:  #023f24;
-}
 
-.slides-progress .slide-step.step-success:not(.active) {
-    background-color: #023f24;
-    border: 1px solid #023f24;
-}
 
-.btn btn-primary btn-sm{
-    background-color: #edf5f1;
-    color: var(--white);
-    white-space: nowrap;
-    --icon-stroke: currentColor;
-    --icon-fill-bg: #023f24;
-}
 
 .login-img{
     padding-right: 0px;
@@ -120,3 +136,4 @@ padding-top: 30px;
 .form-footer{
     margin-top: 5px;
 }
+
